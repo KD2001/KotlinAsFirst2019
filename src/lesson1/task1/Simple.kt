@@ -2,6 +2,7 @@
 
 package lesson1.task1
 
+import java.lang.Math.pow
 import kotlin.math.*
 
 /**
@@ -121,11 +122,8 @@ fun travelMinutes(hoursDepart: Int, minutesDepart: Int, hoursArrive: Int, minute
  * Например, 100 рублей под 10% годовых превратятся в 133.1 рубля
  */
 
-fun accountInThreeYears(initial: Int, percent: Int): Double {
-    val a = initial + (initial * percent / 100.0)
-    return a + (a * percent / 100.0) + (a + (a * percent / 100.0)) * percent / 100.0
-}
-
+fun accountInThreeYears(initial: Int, percent: Int): Double =
+    initial * (1.0 + percent / 100.0).pow(3.0)
 
 /**
  * Простая

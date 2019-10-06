@@ -200,6 +200,7 @@ fun triangleKind(a: Double, b: Double, c: Double): Int {
 fun segmentLength(a: Int, b: Int, c: Int, d: Int): Int {
     return when {
         a == b && b == c && c == d -> 0
+        b == c -> 0
         c == d && c in a..b -> 1
         a == b && a in c..d -> 1
         c in a..b && b < d -> b - c

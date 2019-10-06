@@ -75,6 +75,7 @@ fun ageDescription(age: Int): String {
         age % 100 in 75..80 -> "$age лет"
         age % 100 in 85..90 -> "$age лет"
         age % 100 in 95..100 -> "$age лет"
+        age == 100 -> "100 лет"
         age % 100 in 105..120 -> "$age лет"
         age % 100 in 125..130 -> "$age лет"
         age % 100 in 135..140 -> "$age лет"
@@ -198,6 +199,7 @@ fun triangleKind(a: Double, b: Double, c: Double): Int {
  */
 fun segmentLength(a: Int, b: Int, c: Int, d: Int): Int {
     return when {
+        a == b && b == c && c == d -> 0
         c == d && c in a..b -> 1
         a == b && a in c..d -> 1
         c in a..b && b < d -> b - c

@@ -2,6 +2,7 @@
 
 package lesson3.task1
 
+import java.lang.Math.abs
 import kotlin.math.sqrt
 import lesson3.task1.fib as fib
 
@@ -70,7 +71,7 @@ fun digitCountInNumber(n: Int, m: Int): Int =
  */
 fun digitNumber(n: Int): Int {
     var count = 1
-    var number = n
+    var number = abs(n)
     do {
         if (number / 10 != 0) {
             count++

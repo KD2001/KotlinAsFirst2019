@@ -4,7 +4,6 @@ package lesson3.task1
 
 import java.lang.Math.abs
 import kotlin.math.sqrt
-import lesson3.task1.fib as fib
 
 /**
  * Пример
